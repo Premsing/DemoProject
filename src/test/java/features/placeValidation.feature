@@ -19,3 +19,6 @@ Scenario: Verify if the Delete Place functionality is working
 	When user calls "deletePlaceAPI" with "POST" HTTP request
 	Then the API call got success with status code 200
 	And "status" in response body is "OK"
+	And "status2" in response body is "OK"
+	And "status3" in response body is "OK"
+	
