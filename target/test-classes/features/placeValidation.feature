@@ -7,6 +7,8 @@ Scenario Outline: Verify if place is being added successfully using AddPlaceAPI
 	And "status" in response body is "OK"
 	And "scope" in response body is "APP"
 	And verify place_id created maps to "<name>" using "getPlaceAPI"
+	And "status" in response body is "OK"
+	And "scope" in response body is "APP"
 	
 	
 Examples:
@@ -20,5 +22,7 @@ Scenario: Verify if the Delete Place functionality is working
 	When user calls "deletePlaceAPI" with "POST" HTTP request
 	Then the API call got success with status code 200
 	And "status" in response body is "OK"
+	And "status" in response body is "OK"
+	And "scope" in response body is "APP"
 	
 	
